@@ -1,0 +1,925 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: Louis George Cafe;
+    src: url("Louis George Cafe.ttf");
+}
+@font-face {
+    font-family: Barett Street;
+    src: url("Barett Street.ttf");
+}
+
+body {
+    background-color: #050C00;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: "Louis George Cafe";
+}
+
+header {
+    background-image: url("./Assets/hero bg.jpg");
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 776px;
+    background-size: cover;
+    background-position: center;
+}
+
+header .header-foreground {
+    background: rgb(0, 0, 0);
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(5, 12, 0, 1) 100%);
+    width: 100%;
+    height: 100%;
+}
+
+header .header-foreground .navbar {
+    width: 100%;
+    height: 67px;
+    background: rgb(0, 0, 0);
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.65) 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header .header-foreground .navbar .navbar-container {
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .header-foreground .navbar .burger-menu {
+    cursor: pointer;
+}
+
+header .header-foreground .navbar .navbar-container .nav-icons {
+    display: none;
+    width: 40%;
+    justify-content: space-evenly;
+}
+
+header .header-foreground .navbar .navbar-container .nav-icons h1 {
+    font-family: "Louis George Cafe";
+    color: #FCFCFC;
+    font-size: 28px;
+    font-weight: 400;
+    position: relative;
+}
+
+header .header-foreground .navbar .navbar-container .nav-icons h1:before {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(to right, #06590A, #06DA1E);
+    transition: width 0.25s ease-out;
+}
+
+header .header-foreground .navbar .navbar-container .nav-icons h1:hover::before {
+    width: 100%;
+    left: 0;
+    right: auto;
+}
+
+header .header-foreground .navbar h1 {
+    font-family: "Barett Street";
+    font-size: 36px;
+    color: #06DA1E;
+    cursor: pointer;
+}
+
+header .header-foreground .navbar .burger-menu-line {
+    background-color: white;
+    width: 34px;
+    height: 2px;
+    margin: 8px 0;
+    border-radius: 100px;
+}
+
+header .header-foreground .hero-photo {
+    width: 100%;
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: clip;
+    z-index: 1;
+}
+
+header .header-foreground .hero-photo img {
+    border-radius: 30px;
+    width: 289px;
+    height: 258px;
+}
+
+header .header-foreground .hero-photo .dots {
+    position: absolute;
+    bottom: 15px;
+    right: 0;
+    z-index: -1;
+}
+
+header .header-foreground .hero-text {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+header .header-foreground .hero-text .hero-text-title {
+    width: 70%;
+    font-size: 25px;
+}
+
+header .header-foreground .hero-text .hero-text-title span {
+    font-family: "Barett Street";
+    font-size: 36px;
+    color: #06DA1E;
+}
+
+header .header-foreground .hero-text .hero-text-description {
+    font-size: 19px;
+}
+
+header .header-foreground .hero-text button {
+    margin-top: 10px;
+    border: none;
+    border-radius: 20px;
+    padding: 5px 10px;
+    width: 187px;
+    height: 55px;
+    color: white;
+    font-size: 18px;
+    background-color: #06590A;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+header .header-foreground .hero-text button:hover {
+    background-color: #033104;
+}
+
+section.about {
+    width: 90%;
+    margin: 30px 0;
+    overflow: clip;
+    position: relative;
+
+}
+
+section.about .about-main-title {
+    width: 192px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 5px;
+    gap: 10px;
+}
+
+section.about .about-main-title h2 {
+    font-size: 20px;
+}
+
+section.about .about-main-title span {
+    font-family: "Barett Street";
+    color: #06DA1E;
+}
+
+section.about .about-title {
+    align-self: center;
+    margin-top: 30px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+section.about .about-title h1 {
+    color: #06DA1E;
+    text-align: center;
+    width: 340px;
+}
+
+section.about .members-grid {
+    margin-top: 25px;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-column-gap: 14px;
+    grid-row-gap: 14px;
+    grid-row: auto;
+    justify-content: center;
+}
+
+section.about .members-grid .member {
+}
+
+section.about .members-grid .member img {
+    border-radius: 16px;
+    width: 122px;
+    height: 122px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+section.about .members-grid .member img:hover {
+    transform: scale(1.1);
+
+}
+
+section.about .members-grid .member p {
+    text-align: center;
+    font-size: 11px;
+}
+
+section.about .members-grid svg {
+    position: absolute;
+    top: -60px;
+    z-index: -1;
+}
+
+section.about .about-description {
+    display: flex;
+    justify-content: center;
+}
+
+section.about .about-description p {
+    margin-top: 20px;
+    font-size: 20px;
+    text-align: center;
+    width: 305px;
+}
+
+section.albums {
+    width: 100%;
+    overflow: clip;
+}
+
+section.albums .albums-main-title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+section.albums .albums-main-title h1 {
+    font-family: "Barett Street";
+    color: #06DA1E;
+    font-size: 38px;
+}
+
+section.albums .albums-main-title p {
+    margin-top: 10px;
+    text-align: center;
+    font-size: 24px;
+}
+
+section.albums .albums-cards {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-column-gap: 14px;
+    grid-row-gap: 14px;
+    justify-content: center;
+    margin-top: 20px;
+    position: relative;
+}
+
+section.albums .albums-cards .album img {
+    width: 155px;
+    height: 155px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+section.albums .albums-cards .album img:hover {
+    transform: scale(1.1);
+}
+
+section.albums .albums-cards .album h3, p {
+    margin: 5px 0;
+    text-align: center;
+}
+
+section.albums .albums-cards .into-the-sun {
+    justify-self: center;
+    grid-column: 1/ span 2;
+}
+
+section.albums .albums-cards svg {
+    position: absolute;
+    top: 100px;
+    z-index: -1;
+}
+
+section.top-songs {
+    position: relative;
+}
+
+section.top-songs svg {
+    position: absolute;
+    z-index: -1;
+    top: 150px;
+    right: -30px;
+}
+
+section.top-songs .top-songs-main-title svg {
+    position: static;
+}
+
+section.top-songs .top-songs-main-title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 15px;
+}
+
+section.top-songs .top-songs-main-title svg {
+    width: 29px;
+    height: 13px;
+}
+
+section.top-songs .top-songs-table-container table {
+    margin-top: 20px;
+    margin-bottom: 120px;
+}
+
+section.top-songs .top-songs-table-container table tr th {
+    text-align: left;
+    margin-left: 20px;
+    font-weight: 200;
+}
+
+section.top-songs .top-songs-table-container table tr td {
+    padding: 5px;
+}
+
+section.top-songs .top-songs-table-container table tr td img {
+    width: 40px;
+    height: 40px;
+}
+
+section.top-songs .top-songs-table-container table tr td.duration {
+    text-align: center;
+}
+
+section.top-songs .top-songs-table-container table tr td.rank {
+    padding: 0;
+}
+
+section.events {
+    position: relative;
+    margin-bottom: 200px;
+}
+
+section.events .events-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+section.events .events-container h1 {
+    text-align: center;
+    font-family: "Barett Street";
+    color: #06DA1E;
+    font-size: 38px;
+}
+
+section.events .events-container table tr th {
+    font-weight: 100;
+    font-size: 13px;
+    padding-bottom: 8px;
+}
+
+section.events .events-container table tr td {
+    text-align: center;
+    font-size: 14px;
+    padding-bottom: 8px;
+}
+
+section.events .events-container button.see-more-btn {
+    background: rgba(0, 0, 0, 0);
+    border-radius: 3px;
+    color: white;
+    padding: 6px 43px;
+    font-family: "Louis George Cafe";
+    font-size: 15px;
+    border: solid 1px #06590A;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+section.events .events-container button.see-more-btn:hover {
+    border: solid 1px #06DA1E;
+}
+
+section.events svg {
+    position: absolute;
+    z-index: -1;
+    top: 120px;
+}
+
+footer {
+    width: 100%;
+    height: 544px;
+    background-image: url("./Assets/Lord Huron crystal ball.png");
+    background-position: center;
+    background-size: cover;
+}
+
+footer div.footer-container {
+    width: 100%;
+    height: 100%;
+    background: rgb(0, 0, 0);
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0) 0%, rgba(5, 12, 0, 1) 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+footer div.footer-container div.footer-content div.footer-text {
+    width: 100%;
+}
+
+footer div.footer-container div.footer-content div.footer-text h1 {
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+footer div.footer-container div.footer-content div.footer-text h1:hover {
+    color: #06590A;
+}
+
+footer div.footer-container div.footer-content {
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+    height: 100%;
+    position: relative;
+}
+
+footer div.footer-container h1 {
+    font-family: "Barett Street";
+    font-size: 72px;
+    color: #06DA1E;
+    font-weight: 500;
+}
+
+footer div.footer-container div.footer-content div.useful-links {
+    margin-top: 20px;
+    align-self: start;
+}
+
+footer div.footer-container div.footer-content div.useful-links p {
+    text-align: start;
+}
+
+footer div.footer-container div.footer-content div.useful-links h3 {
+    text-align: start;
+}
+
+footer div.footer-container div.footer-content div.useful-links h3 {
+    color: #06590A;
+    font-size: 22px;
+}
+
+footer div.footer-container div.footer-content div.useful-links p {
+    font-size: 15px;
+    transition: all 0.2s;
+    cursor: pointer;
+}
+
+footer div.footer-container div.footer-content div.useful-links p:hover {
+    color: #06DA1E;
+}
+
+footer div.footer-container div.footer-content div.latest-news-email {
+    align-self: start;
+}
+
+footer div.footer-container div.footer-content div.latest-news-email p {
+    text-align: start;
+    width: 70%;
+}
+
+footer div.footer-container div.footer-content div.latest-news-email div.email-entry div.email-box {
+    background: #1E1E1E;
+    border-radius: 4px;
+    padding: 5px;
+    margin-right: 5px;
+}
+
+footer div.footer-container div.footer-content div.latest-news-email div.email-entry div.email-box input {
+    border-radius: 4px;
+    border: none;
+    padding: 3px;
+    box-shadow: inset 0 0 5px rgba(18, 18, 18, 0.57);
+    outline: none;
+}
+
+footer div.footer-container div.footer-content div.latest-news-email div.email-entry {
+    display: flex;
+}
+
+footer div.footer-container div.footer-content div.latest-news-email div.email-entry button {
+    background: #1E1E1E;
+    border: none;
+    border-radius: 4px;
+    padding: 2px 10px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+footer div.footer-container div.footer-content div.latest-news-email div.email-entry button:hover {
+    background: #383838
+}
+
+footer div.footer-container div.footer-content div.socials {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-self: end;
+    position: absolute;
+    bottom: 80px;
+}
+
+footer div.footer-container div.footer-content div.socials .socials-fill {
+    margin: 5px 0;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+footer div.footer-container div.footer-content div.socials .socials-fill:hover {
+    filter: invert(0.4) sepia(1) saturate(20) hue-rotate(64.8deg) brightness(1.2);
+}
+
+footer div.footer-container div.footer-content div.footer-line {
+    height: 2px;
+    width: 100%;
+    margin-top: 50px;
+    background: #06DA1E;
+}
+
+footer div.footer-container div.footer-content div.copyrights {
+    display: flex;
+    font-size: 12px;
+    width: 100%;
+    justify-content: space-between;
+}
+
+@media screen and (min-width: 485px) {
+    header .header-foreground .hero-text .hero-text-title {
+        width: 65%;
+        font-size: 25px;
+    }
+
+    header .header-foreground .hero-text .hero-text-description {
+        font-size: 19px;
+        width: 95%;
+    }
+
+    section.about .about-description p {
+        width: 400px;
+    }
+}
+
+@media screen and (min-width: 510px) {
+    header .header-foreground .hero-text .hero-text-description {
+        font-size: 19px;
+        width: 90%;
+    }
+
+    section.albums .albums-cards {
+        grid-column-gap: 30px;
+        grid-row-gap: 30px;
+    }
+
+    section.top-songs .top-songs-table-container table tr td {
+        padding: 5px 30px;
+    }
+
+    section.top-songs .top-songs-table-container table tr td.duration {
+        padding: 0;
+    }
+
+    section.top-songs .top-songs-table-container table tr td.song-name {
+        padding-left: 0;
+    }
+
+    section.about .members-grid {
+        grid-column-gap: 30px;
+        grid-row-gap: 30px;
+    }
+
+    section.about .members-grid .member img {
+        width: 150px;
+        height: 150px;
+    }
+
+    section.about .members-grid .member p {
+        font-size: 16px;
+    }
+
+    header .header-foreground .hero-photo img {
+        width: 351px;
+        height: 314px;
+    }
+}
+
+@media screen and (min-width: 510px) {
+    header .header-foreground .hero-text .hero-text-title {
+        width: 55%;
+    }
+
+    section.events svg {
+        top: 80px;
+        left: 100px;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    header .header-foreground .navbar .burger-menu {
+        display: none;
+    }
+
+    header .header-foreground .hero {
+        display: flex;
+        flex-direction: row-reverse;
+        margin-left: 50px;
+    }
+
+    header .header-foreground .hero-text {
+        align-items: start;
+    }
+
+    header .header-foreground .hero-text .hero-text-title {
+        font-size: 32px;
+        width: 60%;
+    }
+
+    header .header-foreground .hero-text .hero-text-title p {
+        text-align: left;
+    }
+
+    header .header-foreground .hero-text .hero-text-description {
+        font-weight: 200;
+        font-size: 24px;
+    }
+
+    header .header-foreground .hero-text .hero-text-description p {
+        text-align: left;
+    }
+
+    header .header-foreground .hero-text button {
+        padding: 5px 10px;
+        width: 260px;
+        height: 40px;
+        font-weight: 200;
+    }
+
+    header .header-foreground .navbar .navbar-container .nav-icons {
+        display: flex;
+    }
+
+    section.about .about-container {
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    section.about .members-grid svg {
+        top: 40px;
+        right: 90px;
+        width: 406px;
+        height: 387px;
+    }
+
+    section.about .about-title h1 {
+        width: 430px;
+    }
+
+    section.about .about-container .about-text {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    section.about .about-description p {
+        margin-top: 20px;
+        font-size: 20px;
+        text-align: left;
+        width: 450px;
+    }
+
+    section.albums {
+        height: 70vh;
+    }
+
+    section.albums .albums-cards {
+        display: flex;
+        gap: 40px;
+    }
+
+    section.albums .albums-cards svg {
+        position: absolute;
+        top: -50px;
+        left: -90px;
+    }
+
+    section.top-songs {
+        width: 95%;
+        overflow: clip;
+        display: flex;
+        flex-direction: column;
+    }
+
+    section.top-songs .top-songs-table-container table {
+        font-size: 20px;
+    }
+
+    section.top-songs svg {
+        width: 351px;
+        height: 376px;
+        top: 50px;
+        right: -20px;
+    }
+
+    section.events {
+        width: 100%;
+    }
+
+    section.events .events-container table {
+        width: 100%;
+    }
+
+    section.events .events-container table tr th {
+        font-size: 20px;
+    }
+
+    section.events .events-container table tr td {
+        padding: 10px 10px;
+        font-size: 16px;
+        font-weight: 200;
+    }
+
+    section.events .events-container button.see-more-btn {
+        margin-top: 20px;
+        font-size: 20px;
+        font-weight: 200;
+    }
+
+    section.events svg {
+    }
+
+    footer div.footer-container div.footer-content div.footer-text {
+        display: flex;
+        height: 80%;
+        width: 100%;
+        justify-content: space-evenly;
+        gap: 30px;
+    }
+
+    footer div.footer-container div.footer-content div.footer-text h1 {
+        align-self: start;
+    }
+
+    footer div.footer-container div.footer-content div.useful-links {
+        align-self: center;
+    }
+
+    footer div.footer-container div.footer-content div.latest-news-email {
+        align-self: center;
+        justify-self: end;
+    }
+
+    footer div.footer-container div.footer-content div.socials {
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 10px;
+    }
+}
+
+@media screen and (min-width: 1920px) {
+    header .header-foreground .hero-photo img {
+        border-radius: 30px;
+        width: 487px;
+        height: 435px;
+    }
+
+    header .header-foreground .hero {
+        align-items: center;
+        gap: 20px;
+        justify-content: space-evenly;
+    }
+
+    header .header-foreground .hero-photo {
+        width: 30%;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    header .header-foreground .hero-text {
+        width: 30%;
+    }
+
+    header .header-foreground .hero-text .hero-text-title {
+        font-size: 36px;
+        width: 60%;
+    }
+
+    header .header-foreground .hero-text .hero-text-description {
+        font-weight: 200;
+        width: 80%;
+        line-height: 35px;
+        margin: 20px 0;
+        font-size: 24px;
+    }
+
+    section.about .about-container {
+        display: flex;
+        justify-content: space-evenly;
+        gap: 500px;
+    }
+
+    section.about .members-grid svg {
+        top: 40px;
+        right: 170px;
+        width: 406px;
+        height: 387px;
+    }
+
+    section.about .about-title h1 {
+        width: 420px;
+        font-weight: 500;
+    }
+
+    section.about .about-description p {
+        font-weight: 300;
+        width: 516px;
+    }
+
+    section.albums .albums-cards .album img {
+        width: 250px;
+        height: 250px;
+    }
+
+    section.albums .albums-cards svg {
+        position: absolute;
+        top: -50px;
+        left: -150px;
+    }
+
+    section.top-songs {
+        height: 70vh;
+        width: 100%;
+    }
+
+    section.top-songs .top-songs-table-container table {
+        font-size: 24px;
+    }
+
+    section.top-songs svg {
+        width: 539px;
+        height: 577px;
+        top: -10px;
+        right: -20px;
+    }
+
+    section.top-songs .top-songs-content {
+        margin-left: 100px;
+    }
+
+    section.top-songs .top-songs-main-title {
+        margin-left: 100px;
+    }
+
+    section.events .events-container table tr td {
+        padding: 10px 120px;
+        font-size: 20px;
+        font-weight: 100;
+    }
+
+    section.events .events-container button.see-more-btn {
+        margin-top: 20px;
+        font-size: 20px;
+        font-weight: 200;
+    }
+
+    section.events svg {
+        top: 0;
+    }
+
+}
